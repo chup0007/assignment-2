@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- form -->
     <h1>Sign Up</h1>
     <form @submit.prevent="onSubmit">
       <div>
@@ -20,6 +21,7 @@
 </template>
 <script>
 import { mapActions } from "vuex";
+// form inputs
 export default {
   data() {
     return {
@@ -29,6 +31,7 @@ export default {
     };
   },
   methods: {
+    // getting the information from the form inputs
     ...mapActions(["getInfo"]),
     onSubmit() {
       const formData = {
