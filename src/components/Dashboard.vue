@@ -12,6 +12,7 @@ import { mapGetters } from "vuex";
 
 export default {
   name: "dashboard",
+  // initial values
   data() {
     return {
       name: "",
@@ -19,6 +20,7 @@ export default {
       title: "Dashboard"
     };
   },
+  // updating the value on the dashboard page
   created() {
     this.email = this.getInfo.info.email;
     this.name = this.getInfo.info.name;

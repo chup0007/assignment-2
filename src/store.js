@@ -7,6 +7,7 @@ export default new Vuex.Store({
   state: {
     info: []
   },
+  // updating data
   mutations: {
     GET_FORM(state, info) {
       state.info = info;
@@ -19,6 +20,7 @@ export default new Vuex.Store({
       });
     }
   },
+  // mapping the new information
   getters: {
     getInfo: state => {
       return state.info;
