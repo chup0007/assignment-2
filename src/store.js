@@ -4,7 +4,24 @@ import Vuex from "vuex";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {},
-  mutations: {},
-  actions: {}
+  state: {
+    info: []
+  },
+  mutations: {
+    GET_FORM(state, info) {
+      state.info = info;
+    }
+  },
+  actions: {
+    myForm({ commit }, { info }) {
+      commit("GET_FORM", {
+        info
+      });
+    }
+  },
+  getters: {
+    getInfo: state => {
+      return state.info;
+    }
+  }
 });

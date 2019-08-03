@@ -1,12 +1,19 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link :to="{ name: 'home' }">Sign Up</router-link>|
+      <router-link :to="{ name: 'dashboard' }">Dashboard</router-link>
     </div>
+    <div class="error" v-if="error">{{ error }}</div>
     <router-view />
   </div>
 </template>
+<script>
+import { mapState } from "vuex";
+export default {
+  computed: mapState(["error"])
+};
+</script>
 
 <style>
 #app {
